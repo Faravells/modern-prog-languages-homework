@@ -32,11 +32,7 @@ def parseShips(url):
 def main():
     df_links = pd.read_excel('Links.xlsx')
     res = []
-    cnt = 20
     for index, row in df_links.iterrows():
-        cnt -= 1
-        if cnt == 0:
-            break
         print(f'Обработка {index + 1} ссылки')
         info = parseShips(row['Ссылка'])
         if info:
@@ -46,4 +42,5 @@ def main():
     print(f"Сохранено {len(res)} записей в result.xlsx")
 
 if __name__ == '__main__':
+
     main()
