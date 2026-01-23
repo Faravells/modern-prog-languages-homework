@@ -1,3 +1,5 @@
+#работа выполнена в паре с Гнатенко Андреем
+
 from kafka import KafkaConsumer
 from kafka.errors import KafkaError
 import psycopg2
@@ -324,4 +326,5 @@ def main():
         print(f"Failed to start consumer: {e}")
 
 if __name__ == "__main__":
+
     main()
